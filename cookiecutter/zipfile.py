@@ -70,6 +70,7 @@ def unzip(zip_uri, is_url, clone_to_dir='.', no_input=False, password=None):
 
         # Construct the final target directory
         project_name = first_filename[:-1]
+        # changed base path 
         unzip_base = '.'
         unzip_path = os.path.join(unzip_base, project_name)
 
