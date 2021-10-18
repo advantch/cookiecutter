@@ -59,12 +59,12 @@ def unzip(zip_uri, is_url, clone_to_dir='.', no_input=False, password=None):
 
         # The first record in the zipfile should be the directory entry for
         # the archive. If it isn't a directory, there's a problem.
-        first_filename = zip_file.namelist()[0]
-        if not first_filename.endswith('/'):
-            raise InvalidZipRepository(
-                'Zip repository {} does not include '
-                'a top-level directory'.format(zip_uri)
-            )
+        #first_filename = zip_file.namelist()[0]
+        #if not first_filename.endswith('/'):
+         #   raise InvalidZipRepository(
+          #      'Zip repository {} does not include '
+           #     'a top-level directory'.format(zip_uri)
+           # )
 
         # Construct the final target directory
         project_name = first_filename[:-1]
