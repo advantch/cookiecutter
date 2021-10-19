@@ -100,7 +100,7 @@ def determine_repo_dir(
             no_input=no_input,
             password=password,
         )
-        repository_candidates = [unzipped_dir]
+        repository_candidates = [template.strip('./').strip('.zip')]
         cleanup = True
     elif is_repo_url(template):
         cloned_repo = clone(
